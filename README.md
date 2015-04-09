@@ -12,22 +12,20 @@ The samples were collected from various locations, every month for 2 years. Once
 * Date and Site data
 * Method of Capture
 * Fish ID number
-* Hood length (HL)
-* Mantle width (Width)
-* Whole Weight
-* Mantle Weight
-* Quill Length *see picture below
-* 
+* Biological Data:
+ * Hood length (HL)
+ * Mantle width (Width)
+ * Whole Weight
+ * Mantle Weight
+ * Quill Length *see picture below
+* Reproductive data:
+ * Sex
+ * Gonad Stage
+ * Gonad Weight
+   * Ovary / Testes Weight
+   * Sperm / Oocyte Weight
 
 ![Squid Quill](http://2.bp.blogspot.com/-jSjCkTvF2Sg/TpzcqQ-wgBI/AAAAAAAAArU/yY5IQ4pbmHc/s1600/Squid+step+four+remove+quill.jpg)
-
-"Year"            "Month"           "Day"             "Region"         
- [5] "Site"            "Fisher"          "Method"          "sector"         
- [9] "Fish.no."        "HL"              "Width"           "Whole.Weight"   
-[13] "Mantle.weight"   "Quill.length"    "Sex"             "Stage"          
-[17] "OW.testes"       "NW.sperm"        "ODV.vasdeferens" "OV.penis"       
-[21] "Whole.nadWt"     "Nads.kept"       "Mated"           "Comments"       
-
 
 ###Underlying question and task
 
