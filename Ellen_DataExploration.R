@@ -8,10 +8,14 @@ setwd("~/GitHub/Squid_Data")
 # list all the files in your directory
 list.files()
 # read in the data
-dat <- read.csv("Southern Calamari (Sepioteuthis australis) data 16.3.15.csv")
+dat <- read.csv("Southern Calamari (Sepioteuthis australis) data 16.3.15.csv", as.is=T)
 # initial look at the data:
 # structure
 str(dat)
+# Red flag - there are some crazy characters in some variables
+# Fix by recoding to NAs
+dat[dat==""] <- NA
+dat[dat==" "] <- NA
 # first 6 lines of data
 head(dat)
 # there are a lot of columns in this data, which means it is very comprehensive,
@@ -28,18 +32,9 @@ View(dat)
 
 ########################################################################
 # Underlying question and task
-# I will clarify this with Pete Coulson / Jake Chandler, but:
-# The Squid data is a biological survey of the South Calamari from the Cockburn
-# Sound (Rockingham(?), Western Australia).
-# The project was very comprehensive and involved collecting squid every month
-# for 2 years. 
-# Once the specimens were colloected, biological data was measured from the squid,
-# including total length, weight, sex, and various weights of the sexual organs
-# The desired results of the study are:
-# - Sexual maturation time series (when are the squid spawning)
-# - Length @ sexual maturation
-# - Sex ratios
-# more TBA
+
+# Can be found at:
+# https://github.com/MURUGPerth/Squid_Data/blob/master/README.md
 
 # The task for the moment is to apply a data exploration. 
 ########################################################################
@@ -70,8 +65,8 @@ source("HighstatLibV6.R")
 #A Outliers
 
 # Outliers in the X
-dotchart(dat$HL, main = "HL")
-dotchart(dat$Width, main = "Width")
+dotchart(dat$HL, main = "Hood Length")
+dotchart(dat$Width, main = "Mantle Width")
 dotchart(dat$Whole.Weight, main = "Whole Weight")
 dotchart(dat$Mantle.weight, main = "Mantle Weight")
 dotchart(dat$Quill.length, main = "Quill Length")
@@ -81,8 +76,73 @@ dotchart(dat$Whole.nadWt, main = "Nad Weight")
 # To make all these plots in a nice grid to assess outliers
 MyVar <- c("HL", "Width", "Whole.Weight", "Mantle.weight", "Quill.length", "Stage", "Whole.nadWt")
 Mydotplot(dat[,MyVar])
-# Summary of outliers: OK
+
+# Optional: export staight to a .png file
+# png("Outliers.png")
+# Mydotplot(dat[,MyVar])
+# dev.off()
+
+# How do the outliers look?
 
 ##############################################
 #B Collinearity X
+#C. Relationships Y vs X
 
+pairs(dat[, MyVar])
+
+pairs(dat[, MyVar], lower.panel = panel.cor)
+
+# Optional: export staight to a .png file
+# png("Collinearity.png")
+# pairs(dat[, MyVar], lower.panel = panel.cor)
+# dev.off()
+
+
+##############################################
+#D. Spatial/temporal aspects of sampling
+#Not relevant here
+
+##############################################
+#E Interactions
+
+coplot(Whole.nadWt ~ HL | factor(Sex), data = dat, xlab= "Hood Length", ylab = "Whole Nad Weight")
+
+xyplot(Whole.nadWt ~ HL | factor(Sex), data = dat, xlab= "Hood Length", ylab = "Whole Nad Weight")
+
+# Optional: export staight to a .png file
+# png("Interactions.png")
+# xyplot(Whole.nadWt ~ HL | factor(Sex), data = dat, xlab= "Hood Length", ylab = "Whole Nad Weight")
+# dev.off()
+
+##############################################
+#F. Zero inflation
+
+# I am not sure if this is even relevant to the data...
+
+
+# sum(dat$HL == 0, na.rm=T)
+# sum(dat$Width == 0, na.rm=T)
+# sum(dat$Whole.Weight == 0, na.rm=T)
+# sum(dat$Mantle.weight == 0, na.rm=T)
+# sum(dat$Quill.length == 0, na.rm=T)
+# sum(dat$Sex == 0, na.rm=T)
+# sum(dat$Stage == 0, na.rm=T)
+# sum(dat$OW.testes == 0, na.rm=T)
+# sum(dat$NW.sperm == 0, na.rm=T)
+# sum(dat$ODV.vasdeferens == 0, na.rm=T)
+# sum(dat$OV.penis == 0, na.rm=T)
+# sum(dat$Whole.nadWt == 0, na.rm=T)
+# sum(dat$Whole.nadWt == 0, na.rm=T) / nrow(dat) # calculate proportion of zeros
+
+
+##############################################
+#G. Are categorical covariates balanced?
+table(dat$Sex)
+pie(table(dat$Sex))
+
+
+##############################################
+# This is in the Zuur course notes and I have no idea why
+#DON'T MAKE HISTOGRAMS OF COVARIATES!!!!!!!!!!!!!!
+#DON'T MAKE HISTOGRAMS OF THE RESPONSE VARIABLE!!!!!!!!!!!!!!
+##############################################
