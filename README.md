@@ -1,7 +1,7 @@
 # Southern Calamari 
 ##(<i>Sepioteuthis australis<i/>) 
 
-This dataset is from a research project at Murdoch Univeristy, carried out by Peter Coulson and Jake Chandler, in conjuction with the Department of Fisheries of Western Australia.  
+This dataset is from a research project at Murdoch Univeristy, carried out by Peter Coulson and Jake Chandler, in conjuction with the [Department of Fisheries of Western Australia.](http://www.fish.wa.gov.au/Documents/recreational_fishing/additional_fishing_information/send_us_your_squid_flyer.pdf)  
 
 The data is a very comprehensive biological assay of the Southern Calamari of Western Australia.  
 
