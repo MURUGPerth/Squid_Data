@@ -1,17 +1,47 @@
-# Southern Calamari (<i>Sepioteuthis australis<i/>) 
-Sample Data from Peter Coulson and Jake Chandler
+# Southern Calamari 
+##(<i>Sepioteuthis australis<i/>) 
 
-Analysis
-1. calculate GSI
-2. GSI vs. month + factor(sex) time series
-3. Stage and month  + factor(sex) time series
-4. Mantle weight M vs F - mean values (t.test)
-5. Find any relationships between length (quill), month (season) - > GSI
-6. Any differences in sites? Albany Geo sound Cockbsurn
-7. Histograms nad parameters ~ season
+This dataset is from a research project at Murdoch Univeristy, carried out by Peter Coulson and Jake Chandler, in conjuction with the Department of Fisheries of Western Australia.  
 
-
+The data is a very comprehensive biological assay of the Southern Calamari of Western Australia.  
 
 ![Image of Southern Calamari](http://www.redmap.org.au/assets/media/uploads/2012/12/10/3.%20Squid%20(G%20Pecl).jpg)
 
+
+The samples were collected from various locations, every month for 2 years. Once the specimens were collected, bioligcal data was measured and recorded. Variables which were recorded include:
+* Date and Site data
+* Method of Capture
+* Fish ID number
+* Hood length (HL)
+* Mantle width (Width)
+* Whole Weight
+* Mantle Weight
+* Quill Length *see picture below
+* 
+
+![Squid Quill](http://2.bp.blogspot.com/-jSjCkTvF2Sg/TpzcqQ-wgBI/AAAAAAAAArU/yY5IQ4pbmHc/s1600/Squid+step+four+remove+quill.jpg)
+
+"Year"            "Month"           "Day"             "Region"         
+ [5] "Site"            "Fisher"          "Method"          "sector"         
+ [9] "Fish.no."        "HL"              "Width"           "Whole.Weight"   
+[13] "Mantle.weight"   "Quill.length"    "Sex"             "Stage"          
+[17] "OW.testes"       "NW.sperm"        "ODV.vasdeferens" "OV.penis"       
+[21] "Whole.nadWt"     "Nads.kept"       "Mated"           "Comments"       
+
+
+###Underlying question and task
+
+###Analysis:  
+* Calculate the Gonadosomatic Index, defined as:   
+  * (Gonad Weight / Whole Weight) * 100  
+
+* Calculate the Sex Ratio, defined as:  
+  * (Number of Males / Number of Females) * 100  
+
+* Plot the Gonadosomatic Index (GSI) as a time series, contrasting between males and females for each sampling region
+* Plot the Gonad Stage as a time series, contrasting between males and females for each sampling region
+* Compare the mean weight (using fresh, mantle weight) between males and females (t test)
+* Compare the mean weight (using fresh, mantle weight) of Southern Calamari over time, using simple linear regression
+* Compare the mean length (using quill length) between males and females (t test)
+* Compare the mean length (using quill length) of Southern Calamari over time, using simple linear regression
 
