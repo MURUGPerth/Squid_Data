@@ -22,12 +22,15 @@ The samples were collected from various locations, every month for 2 years. Once
  * Sex
  * Gonad Stage
  * Gonad Weight
-   * Ovary / Testes Weight
-   * Sperm / Oocyte Weight
+    * Ovary / Testes Weight
+    * Sperm / Oocyte Weight
 
 ![Squid Quill](http://2.bp.blogspot.com/-jSjCkTvF2Sg/TpzcqQ-wgBI/AAAAAAAAArU/yY5IQ4pbmHc/s1600/Squid+step+four+remove+quill.jpg)
 
 ###Underlying question and task
+* To investigate the reprodutive cycles of the Southern Calamari
+* To find out where the spawning locations of the Southern Calamari 
+* Investigate the maturation of the Southern Calamari
 
 ###Analysis:  
 * Calculate the Gonadosomatic Index, defined as:   
