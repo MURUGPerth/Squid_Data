@@ -5,7 +5,7 @@
 
 # set working directory
 #setwd("~/GitHub/Squid_Data") # laptop
-setwd("C:/Users/User/Google Drive/R/MURUG/GitHub/Squid_Data") # ellen's PC
+setwd("C:/Users/User/Google Drive/R/MURUG/GitHub/Squid_Data/Data Explroation") # ellen's PC
 # list all the files in your directory
 list.files()
 # read in the data
