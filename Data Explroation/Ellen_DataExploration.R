@@ -4,7 +4,8 @@
 # Initialize
 
 # set working directory
-setwd("~/GitHub/Squid_Data")
+#setwd("~/GitHub/Squid_Data") # laptop
+setwd("C:/Users/User/Google Drive/R/MURUG/GitHub/Squid_Data") # ellen's PC
 # list all the files in your directory
 list.files()
 # read in the data
@@ -116,24 +117,12 @@ xyplot(Whole.nadWt ~ HL | factor(Sex), data = dat, xlab= "Hood Length", ylab = "
 
 ##############################################
 #F. Zero inflation
+# does not apply as it is not count data 
 
-# I am not sure if this is even relevant to the data...
-
-
-# sum(dat$HL == 0, na.rm=T)
-# sum(dat$Width == 0, na.rm=T)
-# sum(dat$Whole.Weight == 0, na.rm=T)
-# sum(dat$Mantle.weight == 0, na.rm=T)
-# sum(dat$Quill.length == 0, na.rm=T)
-# sum(dat$Sex == 0, na.rm=T)
-# sum(dat$Stage == 0, na.rm=T)
-# sum(dat$OW.testes == 0, na.rm=T)
-# sum(dat$NW.sperm == 0, na.rm=T)
-# sum(dat$ODV.vasdeferens == 0, na.rm=T)
-# sum(dat$OV.penis == 0, na.rm=T)
-# sum(dat$Whole.nadWt == 0, na.rm=T)
-# sum(dat$Whole.nadWt == 0, na.rm=T) / nrow(dat) # calculate proportion of zeros
-
+sum(complete.cases(dat)) # = 0, makes sense as the last three columns (comments etc.)
+# the main variables we're interested in are in cols 10:21 (hood length - whole nad weight)
+sum(complete.cases(dat[,10:21]))
+sum(complete.cases(dat[,10:21])) / nrow(dat)
 
 ##############################################
 #G. Are categorical covariates balanced?
