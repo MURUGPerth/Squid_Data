@@ -33,6 +33,7 @@ The samples were collected from various locations, every month for 2 years. Once
 * Investigate the maturation of the Southern Calamari
 
 ###Analysis:  
+* :octopus: :octopus: Data Exploration (MURUG meeting 2)
 * Calculate the Gonadosomatic Index, defined as:   
   * (Gonad Weight / Whole Weight) * 100  
 
