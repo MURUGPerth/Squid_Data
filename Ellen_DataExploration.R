@@ -4,7 +4,8 @@
 # Initialize
 
 # set working directory
-setwd("~/GitHub/Squid_Data")
+#setwd("~/GitHub/Squid_Data") # laptop
+setwd("C:/Users/User/Google Drive/R/MURUG/GitHub/Squid_Data/Data Explroation") # ellen's PC
 # list all the files in your directory
 list.files()
 # read in the data
@@ -116,8 +117,16 @@ xyplot(Whole.nadWt ~ HL | factor(Sex), data = dat, xlab= "Hood Length", ylab = "
 
 ##############################################
 #F. Zero inflation
+# does not apply as it is not count data 
 
+<<<<<<< HEAD
 # Not needed here
+=======
+sum(complete.cases(dat)) # = 0, makes sense as the last three columns (comments etc.)
+# the main variables we're interested in are in cols 10:21 (hood length - whole nad weight)
+sum(complete.cases(dat[,10:21]))
+sum(complete.cases(dat[,10:21])) / nrow(dat)
+>>>>>>> origin/master
 
 ##############################################
 #G. Are categorical covariates balanced?

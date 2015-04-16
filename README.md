@@ -33,6 +33,7 @@ The samples were collected from various locations, every month for 2 years. Once
 * Investigate the maturation of the Southern Calamari
 
 ###Analysis:  
+* :octopus: :octopus: Data Exploration (MURUG meeting 2)
 * Calculate the Gonadosomatic Index, defined as:   
   * (Gonad Weight / Whole Weight) * 100  
 
@@ -46,3 +47,5 @@ The samples were collected from various locations, every month for 2 years. Once
 * Compare the mean length (using quill length) between males and females (t test)
 * Compare the mean length (using quill length) of Southern Calamari over time, using simple linear regression
 
+Useful reference for Squid Reproductive Data (Chapter 7, page 72):  
+[Zuur, A. F., et al. "Mixed effects models and extensions in ecology with R. 2009.](http://www.highstat.com/book2.htm)
