@@ -117,23 +117,7 @@ xyplot(Whole.nadWt ~ HL | factor(Sex), data = dat, xlab= "Hood Length", ylab = "
 ##############################################
 #F. Zero inflation
 
-# I am not sure if this is even relevant to the data...
-
-
-# sum(dat$HL == 0, na.rm=T)
-# sum(dat$Width == 0, na.rm=T)
-# sum(dat$Whole.Weight == 0, na.rm=T)
-# sum(dat$Mantle.weight == 0, na.rm=T)
-# sum(dat$Quill.length == 0, na.rm=T)
-# sum(dat$Sex == 0, na.rm=T)
-# sum(dat$Stage == 0, na.rm=T)
-# sum(dat$OW.testes == 0, na.rm=T)
-# sum(dat$NW.sperm == 0, na.rm=T)
-# sum(dat$ODV.vasdeferens == 0, na.rm=T)
-# sum(dat$OV.penis == 0, na.rm=T)
-# sum(dat$Whole.nadWt == 0, na.rm=T)
-# sum(dat$Whole.nadWt == 0, na.rm=T) / nrow(dat) # calculate proportion of zeros
-
+# Not needed here
 
 ##############################################
 #G. Are categorical covariates balanced?
@@ -142,7 +126,6 @@ pie(table(dat$Sex))
 
 
 ##############################################
-# This is in the Zuur course notes and I have no idea why
 #DON'T MAKE HISTOGRAMS OF COVARIATES!!!!!!!!!!!!!!
 #DON'T MAKE HISTOGRAMS OF THE RESPONSE VARIABLE!!!!!!!!!!!!!!
 ##############################################
