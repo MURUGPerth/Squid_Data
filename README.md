@@ -47,5 +47,6 @@ The samples were collected from various locations, every month for 2 years. Once
 * Compare the mean length (using quill length) between males and females (t test)
 * Compare the mean length (using quill length) of Southern Calamari over time, using simple linear regression
 
-Useful reference for Squid Reproductive Data (Chapter 7, page 72):  
-[Zuur, A. F., et al. "Mixed effects models and extensions in ecology with R. 2009.](http://www.highstat.com/book2.htm)
+Useful references:  
+* Squid Reproductive Data Analysis (Chapter 7, page 72): [Zuur, A. F., et al. "Mixed effects models and extensions in ecology with R. 2009.](http://www.highstat.com/book2.htm)
+* Data Exploration Protocol: [Zuur, A. F., Ieno, E. N. and Elphick, C. S. (2010), A protocol for data exploration to avoid common statistical problems. Methods in Ecology and Evolution, 1: 3–14](http://onlinelibrary.wiley.com/doi/10.1111/j.2041-210X.2009.00001.x/epdf)
